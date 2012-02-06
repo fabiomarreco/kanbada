@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E9F8DE59-BE74-44AE-982F-A87D6136233A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>kanbada</RootNamespace>
+    <AssemblyName>kanbada</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>kanbada.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Historia.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UEditorPropriedade.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UEditorPropriedade.Designer.cs">
+      <DependentUpon>UEditorPropriedade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UEstadoTarefa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UEstadoTarefa.Designer.cs">
+      <DependentUpon>UEstadoTarefa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UKanbanBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UKanbanBoard.Designer.cs">
+      <DependentUpon>UKanbanBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UTarefa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UTarefa.Designer.cs">
+      <DependentUpon>UTarefa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WMain.Designer.cs">
+      <DependentUpon>WMain.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UEditorPropriedade.resx">
+      <DependentUpon>UEditorPropriedade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UEstadoTarefa.resx">
+      <DependentUpon>UEstadoTarefa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UKanbanBoard.resx">
+      <DependentUpon>UKanbanBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UTarefa.resx">
+      <DependentUpon>UTarefa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WMain.resx">
+      <DependentUpon>WMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="kanbada.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
