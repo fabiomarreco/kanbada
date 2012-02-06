@@ -1,0 +1,9 @@
+Kanbada!
+Initially developed by: Fabio Catunda Marreco, fabio.marreco@gmail.com
+
+This project is a simple kanban board for small teams inside the same network
+with file sharing.
+
+It works with a network share, everyone using the same file "sptint.xml".
+When anyone changes the status of a given task, it is shared across developers.
+
