@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using System.IO;
+using System.Reflection;
 
 namespace kanbada
 {
@@ -11,11 +13,23 @@ namespace kanbada
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WMain());
+
+            string nomeArquivo = PegaArquivoDefault();
+            if (args.Length > 0)
+                nomeArquivo = args[0];
+
+            Application.Run(new WMain(nomeArquivo));
+        }
+
+
+        public static string PegaArquivoDefault()
+        {
+            string path = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            return Path.Combine(path, "sprint.xml");
         }
     }
 }
