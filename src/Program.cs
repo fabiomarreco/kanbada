@@ -17,12 +17,18 @@ namespace kanbada
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
 
             string nomeArquivo = PegaArquivoDefault();
             if (args.Length > 0)
                 nomeArquivo = args[0];
 
             Application.Run(new WMain(nomeArquivo));
+        }
+
+        static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            Application.Restart();
         }
 
 

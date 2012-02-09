@@ -48,23 +48,25 @@ namespace kanbada
                 Color cor = (historia.Disabled)? Color.Gray : coresPossiveis[i++];
                     
                 foreach (var tarefa in historia.Tarefas)
-                {
                     estados[tarefa.Estado].AdicionaTarefa(tarefa).BackColor = cor ;
-                }
             }
         }
 
         internal void AjustaColunas()
         {
             var paineis = new[] { panel1, panel2, panel3, panel4, panel5 };
-            var tamanho = paineis.Select (s=> s.Width).Average();
+            var tamanhoTotal = paineis.Select (s=> s.Width).Sum();
 
-            foreach (var p in paineis)
-                p.Width = (int)tamanho;
+            var proporcao = new[] { 3.0, 3.0, 1.0, 1.0, 1.0 };
+            
+            
+            var total = proporcao.Sum();
 
-            panel1.Width = (int)((double)tamanho * 1.1);
-            panel2.Width = (int)((double)tamanho * 1.1);
+            var resultado = proporcao.Select (s=> s * tamanhoTotal / total).ToArray();
 
+            
+            for (int i =0; i < paineis.Count(); i++)
+                paineis[i].Width = (int)resultado[i];
         }
 
         public bool Enoding { get; set; }
