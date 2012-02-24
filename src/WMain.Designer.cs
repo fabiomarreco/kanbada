@@ -31,20 +31,20 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WMain));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btAutoSize = new System.Windows.Forms.ToolStripLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.uKanbanBoard = new kanbada.UKanbanBoard();
-            this.btAutoSize = new System.Windows.Forms.ToolStripLabel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -56,6 +56,13 @@
             this.toolStrip1.Size = new System.Drawing.Size(706, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btAutoSize
+            // 
+            this.btAutoSize.Name = "btAutoSize";
+            this.btAutoSize.Size = new System.Drawing.Size(53, 22);
+            this.btAutoSize.Text = "AutoSize";
+            this.btAutoSize.Click += new System.EventHandler(this.tbOrganiza_Click);
             // 
             // panel1
             // 
@@ -75,50 +82,6 @@
             this.panel2.Size = new System.Drawing.Size(706, 354);
             this.panel2.TabIndex = 3;
             // 
-            // notifyIcon
-            // 
-            this.notifyIcon.Text = "notifyIcon1";
-            this.notifyIcon.Visible = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(706, 354);
-            this.panel3.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 249);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Atualizando Quadro...!";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::kanbada.Properties.Resources.softwareUpdate_256;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(224, 204);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(198, 23);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(329, 299);
-            this.panel4.TabIndex = 2;
-            // 
             // uKanbanBoard
             // 
             this.uKanbanBoard.BackColor = System.Drawing.SystemColors.Window;
@@ -130,12 +93,49 @@
             this.uKanbanBoard.Sprint = null;
             this.uKanbanBoard.TabIndex = 0;
             // 
-            // btAutoSize
+            // panel3
             // 
-            this.btAutoSize.Name = "btAutoSize";
-            this.btAutoSize.Size = new System.Drawing.Size(53, 22);
-            this.btAutoSize.Text = "AutoSize";
-            this.btAutoSize.Click += new System.EventHandler(this.tbOrganiza_Click);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(706, 354);
+            this.panel3.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Location = new System.Drawing.Point(198, 23);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(329, 299);
+            this.panel4.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::kanbada.Properties.Resources.softwareUpdate_256;
+            this.pictureBox1.Location = new System.Drawing.Point(48, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(224, 204);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 249);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(285, 31);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Atualizando Quadro...!";
+            // 
+            // notifyIcon
+            // 
+            this.notifyIcon.Text = "notifyIcon1";
+            this.notifyIcon.Visible = true;
             // 
             // WMain
             // 
@@ -153,9 +153,9 @@
             this.toolStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

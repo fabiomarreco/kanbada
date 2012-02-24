@@ -39,9 +39,15 @@ namespace kanbada
         {
             Type tipo = Objeto.GetType();
             PropertyInfo propriedade = tipo.GetProperty(_proprieade);
-            propriedade.SetValue (Objeto, tbValor.Text, new object[] { });
-            if (NotificaAlteracao != null)
-                NotificaAlteracao();
+            string valorAntigo  = propriedade.GetValue(Objeto, new object[] { }).ToString();
+            string valorNovo = tbValor.Text.Trim();
+
+            if (string.Compare(valorAntigo, valorNovo) != 0)
+            {
+                propriedade.SetValue(Objeto, valorNovo, new object[] { });
+                if (NotificaAlteracao != null)
+                    NotificaAlteracao();
+            }
         }
 
 

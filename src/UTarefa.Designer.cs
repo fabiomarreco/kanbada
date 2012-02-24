@@ -31,13 +31,13 @@
             this.pnTopo = new System.Windows.Forms.Panel();
             this.lblHistoria = new System.Windows.Forms.Label();
             this.pnBottom = new System.Windows.Forms.Panel();
-            this.pnTarefa = new System.Windows.Forms.Panel();
-            this.cbDetalhes = new System.Windows.Forms.CheckBox();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.uEditorHoras = new kanbada.UEditorPropriedade();
             this.uEditorVerificador = new kanbada.UEditorPropriedade();
             this.uEditorQuem = new kanbada.UEditorPropriedade();
+            this.pnTarefa = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.cbDetalhes = new System.Windows.Forms.CheckBox();
             this.pnTopo.SuspendLayout();
             this.pnBottom.SuspendLayout();
             this.pnTarefa.SuspendLayout();
@@ -75,50 +75,6 @@
             this.pnBottom.Size = new System.Drawing.Size(119, 51);
             this.pnBottom.TabIndex = 3;
             // 
-            // pnTarefa
-            // 
-            this.pnTarefa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnTarefa.Controls.Add(this.panel1);
-            this.pnTarefa.Controls.Add(this.cbDetalhes);
-            this.pnTarefa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnTarefa.Location = new System.Drawing.Point(0, 29);
-            this.pnTarefa.Name = "pnTarefa";
-            this.pnTarefa.Size = new System.Drawing.Size(119, 62);
-            this.pnTarefa.TabIndex = 4;
-            // 
-            // cbDetalhes
-            // 
-            this.cbDetalhes.AutoSize = true;
-            this.cbDetalhes.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.cbDetalhes.Dock = System.Windows.Forms.DockStyle.Left;
-            this.cbDetalhes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbDetalhes.Location = new System.Drawing.Point(0, 0);
-            this.cbDetalhes.Name = "cbDetalhes";
-            this.cbDetalhes.Size = new System.Drawing.Size(12, 60);
-            this.cbDetalhes.TabIndex = 2;
-            this.cbDetalhes.UseVisualStyleBackColor = true;
-            this.cbDetalhes.CheckedChanged += new System.EventHandler(this.cbDetalhes_CheckedChanged);
-            // 
-            // lblNome
-            // 
-            this.lblNome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(0, 0);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(105, 60);
-            this.lblNome.TabIndex = 1;
-            this.lblNome.Text = "Prepara demonstracao (Por Contraparte)";
-            this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lblNome);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(12, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(105, 60);
-            this.panel1.TabIndex = 3;
-            // 
             // uEditorHoras
             // 
             this.uEditorHoras.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
@@ -145,6 +101,51 @@
             this.uEditorQuem.Name = "uEditorQuem";
             this.uEditorQuem.Size = new System.Drawing.Size(119, 17);
             this.uEditorQuem.TabIndex = 0;
+            // 
+            // pnTarefa
+            // 
+            this.pnTarefa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnTarefa.Controls.Add(this.panel1);
+            this.pnTarefa.Controls.Add(this.cbDetalhes);
+            this.pnTarefa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnTarefa.Location = new System.Drawing.Point(0, 29);
+            this.pnTarefa.Name = "pnTarefa";
+            this.pnTarefa.Size = new System.Drawing.Size(119, 62);
+            this.pnTarefa.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblNome);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(12, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(105, 60);
+            this.panel1.TabIndex = 3;
+            // 
+            // lblNome
+            // 
+            this.lblNome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Location = new System.Drawing.Point(0, 0);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(0);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(105, 60);
+            this.lblNome.TabIndex = 1;
+            this.lblNome.Text = "Prepara demonstracao (Por Contraparte)";
+            this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cbDetalhes
+            // 
+            this.cbDetalhes.AutoSize = true;
+            this.cbDetalhes.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.cbDetalhes.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cbDetalhes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbDetalhes.Location = new System.Drawing.Point(0, 0);
+            this.cbDetalhes.Name = "cbDetalhes";
+            this.cbDetalhes.Size = new System.Drawing.Size(12, 60);
+            this.cbDetalhes.TabIndex = 2;
+            this.cbDetalhes.UseVisualStyleBackColor = true;
+            this.cbDetalhes.CheckedChanged += new System.EventHandler(this.cbDetalhes_CheckedChanged);
             // 
             // UTarefa
             // 

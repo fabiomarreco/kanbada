@@ -62,8 +62,8 @@ namespace kanbada
         private void cbDetalhes_CheckedChanged(object sender, EventArgs e)
         {
             pnBottom.Visible = pnTopo.Visible = cbDetalhes.Checked;
-            SizeF sz = CreateGraphics().MeasureString(lblNome.Text, lblNome.Font, lblNome.Width);
-            int altura = (int)sz.Height + 10;
+            SizeF sz = CreateGraphics().MeasureString(lblNome.Text, lblNome.Font, lblNome.Width-6);
+            int altura = (int)sz.Height + 20;
             pnTarefa.Height = altura;
 
             if (pnBottom.Visible)
