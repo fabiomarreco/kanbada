@@ -182,7 +182,7 @@ namespace kanbada
             fInfo.cbSize = Convert.ToUInt32(Marshal.SizeOf(fInfo));
             fInfo.hwnd = this.Handle;
             fInfo.dwFlags = (uint)(FlashWindowFlags.FLASHW_TRAY | FlashWindowFlags.FLASHW_TIMERNOFG);
-            fInfo.uCount = UInt32.MaxValue;
+            fInfo.uCount = 0;
             fInfo.dwTimeout = 0;
 
             FlashWindowEx(ref fInfo);
