@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("kanbada")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Accenture")]
+[assembly: AssemblyCompany("Marreco")]
 [assembly: AssemblyProduct("kanbada")]
 [assembly: AssemblyCopyright("Copyright © Accenture 2012")]
 [assembly: AssemblyTrademark("")]
