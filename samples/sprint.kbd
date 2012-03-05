@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Sprint xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Historias>
+    <Historia Codigo="1.Extras" Nome="Tarefas Extras (Pendencias Sprint 3)" Disabled="false">
+      <Tarefas>
+        <Tarefa Nome="Ajuste de nomes na tela de edicao da regra do PCE" Estado="ToVerify" Quem="victor" Verificador="" HorasAlocadas="1" />
+        <Tarefa Nome="Remover checklistcombo da regra do pce (zero desabilita)" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Corrigir alinhamento" Estado="ToVerify" Quem="victor" Verificador="" HorasAlocadas="1" />
+        <Tarefa Nome="Colocar regras e 2 abas" Estado="Doing" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="SEL. REG.:Limites -&gt; Restricoes" Estado="ToVerify" Quem="victor" Verificador="" HorasAlocadas="1" />
+        <Tarefa Nome="CADASTRO REGRAS: Verificar comportamento Ctrl C/V" Estado="Backlog" Quem="couto" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Colocar moeda no titulo da coluna dos grids. e.g. Limite(USD)" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Formatar as colunas de limite com valor numerico #,###.#####" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Alterar consumo com warning para ficar com cor amarela" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Trocar o consumo 'Atende' de azul para verde." Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Alterar Label 'Data' -&gt; 'Data de Início'" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Desabilitar Warning na regra de watchlist/blacklist" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Limite de watchlist, fazer filtro considerando apenas contrapartes com VP positivo" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Esconder o link do watchlist com ctrl-shift-f11 (!?)" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Criar limite de concentração de exposição total" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="">
+          <Desc> (Caixa + WCE) / Total</Desc>
+        </Tarefa>
+        <Tarefa Nome="Remover checklistcombo da regra do pce (zero desabilita)" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+      </Tarefas>
+    </Historia>
+    <Historia Codigo="2.Performance" Nome="Testes Performance E Viabilidade LM" Disabled="false">
+      <Tarefas>
+        <Tarefa Nome="Criação de base Vale 316 (Validar) (Mamute)" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Verificar Analiticos" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="">
+          <Desc>
+Certificar que analiticos necessários do Limit Manager estão sendo
+calculados corretamente (verificar erros atuais de falha catastrofica/testes)</Desc>
+        </Tarefa>
+        <Tarefa Nome="Criar Indicadores de crédito para cada contraparte utilizada (CDS, EDF)" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome=" Importar valores dos indicadores de crédito criados" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="">
+          <Desc>
+- EDF (entre 0.02% e 5%) 
+- CDS (1% e 40%)		
+		</Desc>
+        </Tarefa>
+        <Tarefa Nome="Criar grupo econômicos para as contrapartes utilizadas (Holdings)" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Associar os grupos econômicos às contrapartes utilizadas." Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Criar Modelo de Limites 'Regras Crédito'" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="">
+          <Desc>
+- Regra de PCE por contraparte contendo os Limites: 	
+	* (Caixa + WCE)
+	* EDF
+	* EDF Medio
+	* Contribuicao de Risco (EDF * (Caixa + WCE) / CL Total)
+	* Concentração Exposicao Total (Caixa + WCE) / Total
+	
+- Regra de PCE por grupo economico contendo:	
+	* (Caixa + WCE)
+	* (Caixa + WCE) / Total
+	
+ - regra de Indicador de crédito por Spread CDS	
+			</Desc>
+        </Tarefa>
+        <Tarefa Nome="Criar Modelo de Limites 'Restrições de Operações' (BlackList, WatchList)" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Criar Modelo de Limites 'Risco de Mercado'" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="">
+          <Desc>
+- Criar Regra de Limite de VP por contraparte (1 Contraparte) e com filtro para mutuos (ou dividas)
+- Criar regra de Limite de VaR *
+- Criar regra de limite de Stress (3 cenarios) *
+			</Desc>
+        </Tarefa>
+        <Tarefa Nome="Executar o calculo do PCE para a data de analise via agendamento de housekeeping (Medir Tempo)" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Avaliar os números gerados pelo modulo ARC, contra os resultados de calculo dos analiticos subjacentes." Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Fazer testes de escalabilidade (Aumento de tempo de calculo / aumento de operacoes)" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+      </Tarefas>
+    </Historia>
+    <Historia Codigo="3.Relatorios" Nome="Relatorios de SAIDA" Disabled="false">
+      <Tarefas>
+        <Tarefa Nome="Configurar uma unica máscara de relatório, incluindo todos os limites acima" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Calcular relatório do limit manager publicando em EXCEL" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Avaliar necessidade de fazer mascara customizada (?)" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Configurar layout de resultado na tela do sistema ARC" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Verificar que Overhead de tempo sobre os calculos dos analiticos subjacentes deve ser baixo (1-2 min)" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+      </Tarefas>
+    </Historia>
+    <Historia Codigo="4.Stress" Nome="Regra de Stress por Agrupamento" Disabled="true">
+      <Tarefas>
+        <Tarefa Nome="Alterar nome da RegraStress para RegraStressPorCenario" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Alterar RegraConcentracao para ter um dictioanry com parametros" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Criar Novo Editor com campo para selecao cenario (herdando da RegraConcentracao)" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Criar teste unitario para criacao do AnaliticoLM" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+      </Tarefas>
+    </Historia>
+  </Historias>
+</Sprint>
