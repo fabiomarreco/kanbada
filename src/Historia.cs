@@ -46,6 +46,7 @@ namespace kanbada
 
         [XmlAttribute]
         public bool Disabled { get; set; }
+
     }
 
 
@@ -59,6 +60,7 @@ namespace kanbada
             this.Quem = string.Empty;
             this.Verificador = string.Empty;
             this.HorasAlocadas = string.Empty;
+            Desc = null;
         }
 
         [XmlAttribute]
@@ -77,6 +79,8 @@ namespace kanbada
         [XmlAttribute]
         public string HorasAlocadas { get; set; }
         
+        [XmlElement]
+        public string Desc { get; set; }
     }
 
 

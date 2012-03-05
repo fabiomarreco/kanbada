@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnTopo = new System.Windows.Forms.Panel();
             this.lblHistoria = new System.Windows.Forms.Label();
             this.pnBottom = new System.Windows.Forms.Panel();
-            this.uEditorHoras = new kanbada.UEditorPropriedade();
-            this.uEditorVerificador = new kanbada.UEditorPropriedade();
-            this.uEditorQuem = new kanbada.UEditorPropriedade();
             this.pnTarefa = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNome = new System.Windows.Forms.Label();
             this.cbDetalhes = new System.Windows.Forms.CheckBox();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.uEditorHoras = new kanbada.UEditorPropriedade();
+            this.uEditorVerificador = new kanbada.UEditorPropriedade();
+            this.uEditorQuem = new kanbada.UEditorPropriedade();
             this.pnTopo.SuspendLayout();
             this.pnBottom.SuspendLayout();
             this.pnTarefa.SuspendLayout();
@@ -74,33 +76,6 @@
             this.pnBottom.Name = "pnBottom";
             this.pnBottom.Size = new System.Drawing.Size(119, 51);
             this.pnBottom.TabIndex = 3;
-            // 
-            // uEditorHoras
-            // 
-            this.uEditorHoras.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.uEditorHoras.Location = new System.Drawing.Point(0, 34);
-            this.uEditorHoras.Name = "uEditorHoras";
-            this.uEditorHoras.Size = new System.Drawing.Size(119, 17);
-            this.uEditorHoras.TabIndex = 2;
-            // 
-            // uEditorVerificador
-            // 
-            this.uEditorVerificador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.uEditorVerificador.Location = new System.Drawing.Point(0, 17);
-            this.uEditorVerificador.Name = "uEditorVerificador";
-            this.uEditorVerificador.Size = new System.Drawing.Size(119, 17);
-            this.uEditorVerificador.TabIndex = 1;
-            // 
-            // uEditorQuem
-            // 
-            this.uEditorQuem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.uEditorQuem.Location = new System.Drawing.Point(0, 0);
-            this.uEditorQuem.Name = "uEditorQuem";
-            this.uEditorQuem.Size = new System.Drawing.Size(119, 17);
-            this.uEditorQuem.TabIndex = 0;
             // 
             // pnTarefa
             // 
@@ -147,6 +122,40 @@
             this.cbDetalhes.UseVisualStyleBackColor = true;
             this.cbDetalhes.CheckedChanged += new System.EventHandler(this.cbDetalhes_CheckedChanged);
             // 
+            // toolTip
+            // 
+            this.toolTip.AutoPopDelay = 9999;
+            this.toolTip.InitialDelay = 200;
+            this.toolTip.ReshowDelay = 100;
+            this.toolTip.ToolTipTitle = "Descrição";
+            // 
+            // uEditorHoras
+            // 
+            this.uEditorHoras.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.uEditorHoras.Location = new System.Drawing.Point(0, 34);
+            this.uEditorHoras.Name = "uEditorHoras";
+            this.uEditorHoras.Size = new System.Drawing.Size(119, 17);
+            this.uEditorHoras.TabIndex = 2;
+            // 
+            // uEditorVerificador
+            // 
+            this.uEditorVerificador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.uEditorVerificador.Location = new System.Drawing.Point(0, 17);
+            this.uEditorVerificador.Name = "uEditorVerificador";
+            this.uEditorVerificador.Size = new System.Drawing.Size(119, 17);
+            this.uEditorVerificador.TabIndex = 1;
+            // 
+            // uEditorQuem
+            // 
+            this.uEditorQuem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.uEditorQuem.Location = new System.Drawing.Point(0, 0);
+            this.uEditorQuem.Name = "uEditorQuem";
+            this.uEditorQuem.Size = new System.Drawing.Size(119, 17);
+            this.uEditorQuem.TabIndex = 0;
+            // 
             // UTarefa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,5 +188,6 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.CheckBox cbDetalhes;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }

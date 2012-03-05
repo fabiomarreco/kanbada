@@ -20,6 +20,8 @@ namespace kanbada
             uEditorQuem.NotificaAlteracao += notificacao;
             uEditorVerificador.NotificaAlteracao += notificacao;
             uEditorHoras.NotificaAlteracao += notificacao;
+            if (!string.IsNullOrEmpty (tarefa.Desc))
+                toolTip.SetToolTip(lblNome, tarefa.Desc.Trim());
             AjustaTamanho();
         }
 

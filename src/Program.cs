@@ -45,6 +45,7 @@ namespace kanbada
                 if (!File.Exists(nomeArquivo))
                 {
                     nomeArquivo = Regex.Replace (nomeArquivo, "file:/+", "");
+                    nomeArquivo = Uri.UnescapeDataString(nomeArquivo);
                     if (!File.Exists(nomeArquivo))
                         nomeArquivo = @"\\" + nomeArquivo;
                 }
