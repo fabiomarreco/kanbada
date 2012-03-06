@@ -23,11 +23,14 @@ namespace kanbada
             uKanbanBoard.NotificaAlteracao += new Action(NotificaAlteracao);
             uKanbanBoard.SetupNotificacao();
             fw = new FileSystemWatcher(Path.GetDirectoryName(nomeArquivo), Path.GetFileName(nomeArquivo));
-            fw.EnableRaisingEvents = true;
             fw.Changed += new FileSystemEventHandler(fw_Changed);
+            fw.Created += new FileSystemEventHandler(fw_Changed);
+            fw.EnableRaisingEvents = true;
             CarregaSprint();
             this.FormClosing += new FormClosingEventHandler(WMain_FormClosing);
         }
+
+        DateTime dataCarregamento = DateTime.Now;
 
         void WMain_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -58,9 +61,7 @@ namespace kanbada
             }
             catch (Exception ex)
             {
-                if (InvokeRequired)
-                {
-                    this.Invoke( new Action(() =>
+                var recarrega = new Action(() =>
                     {
                         this.Hide();
                         if (MessageBox.Show(string.Format("Ocorreu um erro e o programa deve ser reinicializado! \r\n\n ERRO: {0}\r\n\n {1}", ex.Message, ex.ToString()), "ERRO",
@@ -68,16 +69,21 @@ namespace kanbada
                             Application.Restart();
                         else
                             Application.Exit();
-                    }));
-                        
-                }
+                    });
+
+                if (InvokeRequired)
+                    this.Invoke(recarrega);
+                else
+                    recarrega();
             }
             finally
             {
+                fw.EnableRaisingEvents = true;
                 this.ResumeLayout();
                 if (InvokeRequired)
                     Invoke(new Action(() => { uKanbanBoard.Visible = true; }));
-                fw.EnableRaisingEvents = true;
+                else
+                    uKanbanBoard.Visible = true;
             }
         }
 
@@ -110,12 +116,34 @@ namespace kanbada
             string nomeARquivo = PegaArquivo();
             XmlSerializer serializer = new XmlSerializer(typeof(Sprint));
             fw.EnableRaisingEvents = false;
-            using (StreamWriter sw = new StreamWriter(nomeARquivo, false, Encoding.Default))
+
+            try
             {
-                serializer.Serialize(sw, uKanbanBoard.Sprint);
+                if (File.GetLastWriteTime(nomeARquivo) > dataCarregamento)
+                    throw new Exception("Arquivo Desatualizado... reinicie a aplicacao!");
+
+                using (StreamWriter sw = new StreamWriter(nomeARquivo, false, Encoding.Default))
+                {
+                    serializer.Serialize(sw, uKanbanBoard.Sprint);
+                }
+
+                dataCarregamento = File.GetLastWriteTime(nomeARquivo);
+            }
+            catch (Exception e)
+            {
+                if (InvokeRequired)
+                    Invoke(new Action(() => MessageBox.Show("Erro salvando arquivo: " + e.Message)));
+                else
+                    MessageBox.Show("Erro salvando arquivo: " + e.Message);
+
+                Application.ExitThread();
+                Application.Exit();
+            }
+            finally
+            {
+                fw.EnableRaisingEvents = true;
             }
 
-            fw.EnableRaisingEvents = true;
         }
 
         private void CarregaSprint()
@@ -132,6 +160,8 @@ namespace kanbada
                     uKanbanBoard.Sprint = sprint;
                     uKanbanBoard.AtualizaSprint();
                 }
+
+                dataCarregamento = File.GetLastWriteTime(nomeARquivo);
 
                 if (InvokeRequired)
                     Invoke(new Action(DoFlash));

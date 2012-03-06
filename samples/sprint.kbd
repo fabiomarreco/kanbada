@@ -5,9 +5,9 @@
       <Tarefas>
         <Tarefa Nome="Ajuste de nomes na tela de edicao da regra do PCE" Estado="ToVerify" Quem="victor" Verificador="" HorasAlocadas="1" />
         <Tarefa Nome="Remover checklistcombo da regra do pce (zero desabilita)" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
-        <Tarefa Nome="Corrigir alinhamento" Estado="ToVerify" Quem="victor" Verificador="" HorasAlocadas="1" />
+        <Tarefa Nome="Corrigir alinhamento" Estado="Done" Quem="victor" Verificador="" HorasAlocadas="1" />
         <Tarefa Nome="Colocar regras e 2 abas" Estado="Doing" Quem="" Verificador="" HorasAlocadas="" />
-        <Tarefa Nome="SEL. REG.:Limites -&gt; Restricoes" Estado="ToVerify" Quem="victor" Verificador="" HorasAlocadas="1" />
+        <Tarefa Nome="SEL. REG.:Limites -&gt; Restricoes" Estado="Verifying" Quem="victor" Verificador="" HorasAlocadas="1" />
         <Tarefa Nome="CADASTRO REGRAS: Verificar comportamento Ctrl C/V" Estado="Backlog" Quem="couto" Verificador="" HorasAlocadas="" />
         <Tarefa Nome="Colocar moeda no titulo da coluna dos grids. e.g. Limite(USD)" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
         <Tarefa Nome="Formatar as colunas de limite com valor numerico #,###.#####" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
@@ -15,12 +15,12 @@
         <Tarefa Nome="Trocar o consumo 'Atende' de azul para verde." Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
         <Tarefa Nome="Alterar Label 'Data' -&gt; 'Data de Início'" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
         <Tarefa Nome="Desabilitar Warning na regra de watchlist/blacklist" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
-        <Tarefa Nome="Limite de watchlist, fazer filtro considerando apenas contrapartes com VP positivo" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Limite de watchlist, fazer filtro considerando apenas contrapartes com VP positivo" Estado="Doing" Quem="" Verificador="" HorasAlocadas="" />
         <Tarefa Nome="Esconder o link do watchlist com ctrl-shift-f11 (!?)" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
         <Tarefa Nome="Criar limite de concentração de exposição total" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="">
           <Desc> (Caixa + WCE) / Total</Desc>
         </Tarefa>
-        <Tarefa Nome="Remover checklistcombo da regra do pce (zero desabilita)" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Remover checklistcombo da regra do pce (zero desabilita)" Estado="Doing" Quem="" Verificador="" HorasAlocadas="" />
       </Tarefas>
     </Historia>
     <Historia Codigo="2.Performance" Nome="Testes Performance E Viabilidade LM" Disabled="false">
@@ -31,7 +31,7 @@
 Certificar que analiticos necessários do Limit Manager estão sendo
 calculados corretamente (verificar erros atuais de falha catastrofica/testes)</Desc>
         </Tarefa>
-        <Tarefa Nome="Criar Indicadores de crédito para cada contraparte utilizada (CDS, EDF)" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="" />
+        <Tarefa Nome="Criar Indicadores de crédito para cada contraparte utilizada (CDS, EDF)" Estado="Done" Quem="" Verificador="" HorasAlocadas="" />
         <Tarefa Nome=" Importar valores dos indicadores de crédito criados" Estado="Backlog" Quem="" Verificador="" HorasAlocadas="">
           <Desc>
 - EDF (entre 0.02% e 5%) 

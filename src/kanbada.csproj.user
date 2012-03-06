@@ -11,7 +11,7 @@
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <StartArguments>"C:\Projetos\EspecificacoesTestes\Planejamento\2012\Limit Manager\sprint4.kbd"</StartArguments>
+    <StartArguments>"C:\Users\fabio.marreco\kanbada\samples\sprint.kbd"</StartArguments>
   </PropertyGroup>
   <PropertyGroup>
     <EnableSecurityDebugging>false</EnableSecurityDebugging>
